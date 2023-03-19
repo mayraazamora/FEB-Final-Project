@@ -36,7 +36,6 @@ public class Robot : Agent
         switch (state)
         {
             case State.Idle:
-                break;
                 {
                     break;
 
