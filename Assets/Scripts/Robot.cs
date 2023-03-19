@@ -57,9 +57,13 @@ public class Robot : Agent
                 }
             case State.MoveToLastKnownPlayerPosition:
                 {
+                    //  Play the walking animation
+                    animator.SetBool("Walking", true);
+
+                    // Move to the player's last known location
+                    navAgent.SetDestination(lastKnownPlayerLocation);
                     break;
                 }
-
             default:
                 throw new ArgumentOutOfRangeException(nameof(state), state, null);
         }
