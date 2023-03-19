@@ -37,17 +37,25 @@ public class Robot : Agent
         {
             case State.Idle:
                 break;
-            case State.DetectingPlayer:
-                // Show the detection indicator above the robots head
-                detectionIndicator.SetActive(true);
+                {
+                    break;
 
-                // Start the detection contdown
-                timeLeftUntilDetected = detectionTime;
-                break;
+                }
+            case State.DetectingPlayer:
+                {
+                    // Show the detection indicator above the robots head
+                    detectionIndicator.SetActive(true);
+
+                    // Start the detection contdown
+                    timeLeftUntilDetected = detectionTime;
+                    break;
+                }
             case State.ChasingPlayer:
-                //  Play the walking animation
-                animator.SetBool("Walking", true);
-                break;
+                {
+                    //  Play the walking animation
+                    animator.SetBool("Walking", true);
+                    break;
+                }
             default:
                 throw new ArgumentOutOfRangeException(nameof(state), state, null);
         }
