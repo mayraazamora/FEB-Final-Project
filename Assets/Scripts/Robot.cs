@@ -55,6 +55,11 @@ public class Robot : Agent
                     animator.SetBool("Walking", true);
                     break;
                 }
+            case State.MoveToLastKnownPlayerPosition:
+                {
+                    break;
+                }
+
             default:
                 throw new ArgumentOutOfRangeException(nameof(state), state, null);
         }
